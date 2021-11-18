@@ -32,6 +32,10 @@ html::-webkit-scrollbar-thumb {
   background: #29d9d5;
 }
 
+section {
+  padding: 3rem 9%;
+}
+
 body {
   background: #111;
   overflow-x: hidden;
@@ -50,7 +54,7 @@ body {
 }
 
 .btn:hover {
-  background: #29d9d5;
+  background: radial-gradient(circle at 81% 85%, #00bcd4 0%, #29d9d5 100%);
   color: #111;
 }
 
@@ -106,12 +110,62 @@ body {
   display: none;
 }
 
+.home {
+  margin: 0 auto;
+  margin-top: 9rem;
+  width: 90%;
+  border-radius: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#111111b3), to(#111111b3)), url(../images/home-bg.jpg) no-repeat;
+  background: linear-gradient(#111111b3, #111111b3), url(../images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.home .content {
+  text-align: center;
+}
+
+.home .content span {
+  font-weight: bolder;
+  color: transparent;
+  -webkit-text-stroke: 0.1rem #f8f7f7;
+  font-size: 4vw;
+  display: block;
+}
+
+.home .content h3 {
+  font-size: 6vw;
+  color: #f8f7f7;
+}
+
+.home .content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: #aaa;
+  line-height: 2;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
   }
   .header {
     padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
   }
 }
 
@@ -136,6 +190,15 @@ body {
     margin: 2rem;
     font-size: 2rem;
     display: block;
+  }
+  .home {
+    margin-top: 10rem;
+  }
+  .home .content span {
+    font-size: 8vw;
+  }
+  .home .content h3 {
+    font-size: 9vw;
   }
 }
 
