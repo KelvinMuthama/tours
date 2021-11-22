@@ -30,6 +30,11 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background: #29d9d5;
+  border-radius: 5rem;
+}
+
+body {
+  background: #111;
 }
 
 section {
@@ -49,12 +54,6 @@ section {
 .heading h1 {
   font-size: 4rem;
   color: #f8f7f7;
-  margin-top: .5rem;
-}
-
-body {
-  background: #111;
-  overflow-x: hidden;
 }
 
 .btn {
@@ -423,6 +422,99 @@ body {
   color: #f8f7f7;
 }
 
+.review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.review .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.review .content span {
+  font-size: 2rem;
+  color: #29d9d5;
+}
+
+.review .content h3 {
+  font-size: 3rem;
+  color: #f8f7f7;
+}
+
+.review .content p {
+  font-size: 1.4rem;
+  color: #aaa;
+  padding: 1rem 0;
+}
+
+.review .box-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.review .box-container .box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: #222;
+  border: 0.2rem solid #111;
+}
+
+.review .box-container .box:hover {
+  border: 0.1rem solid #29d9d5;
+}
+
+.review .box-container .box p {
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+  line-height: 2;
+  color: #aaa;
+}
+
+.review .box-container .box .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.review .box-container .box .user img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.review .box-container .box .user h3 {
+  font-size: 2rem;
+  color: #f8f7f7;
+}
+
+.review .box-container .box .user span {
+  color: #aaa;
+  font-size: 1.5rem;
+}
+
 .blogs .box-container {
   display: -ms-grid;
   display: grid;
@@ -502,16 +594,49 @@ body {
   color: #29d9d5;
 }
 
+.banner {
+  background: -webkit-gradient(linear, left top, left bottom, from(#111111b3), to(#111111b3)), url(../images/banner-bg.jpg) no-repeat;
+  background: linear-gradient(#111111b3, #111111b3), url(../images/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.banner .content span {
+  font-size: 2rem;
+  color: #29d9d5;
+}
+
+.banner .content h3 {
+  font-size: 4rem;
+  color: #f8f7f7;
+  margin-top: 1rem;
+}
+
+.banner .content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: #aaa;
+  line-height: 2;
+}
+
 .footer .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(23rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
 
 .footer .box-container .box {
   padding: 1rem 0;
+}
+
+.footer .box-container .box .logo {
+  padding-bottom: 1rem;
 }
 
 .footer .box-container .box h3 {
@@ -528,7 +653,7 @@ body {
 }
 
 .footer .box-container .box p i {
-  padding-right: .7rem;
+  padding-right: .5rem;
   color: #29d9d5;
 }
 
@@ -536,18 +661,16 @@ body {
   padding-top: 1rem;
 }
 
-.footer .box-container .box .share .logo {
-  padding-bottom: 1rem;
-}
-
 .footer .box-container .box .share a {
   height: 4.5rem;
   width: 4.5rem;
   line-height: 4rem;
-  font-size: 1.7rem;
+  font-size: 2rem;
   border-radius: 50%;
+  font-size: 1.7rem;
   border: 0.1rem solid #29d9d5;
   color: #29d9d5;
+  margin-right: .5rem;
   text-align: center;
 }
 
@@ -568,7 +691,7 @@ body {
 }
 
 .footer .box-container .box .links:hover i {
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .footer .box-container .box .links i {
@@ -589,7 +712,7 @@ body {
 }
 
 .credit {
-  background: #111111b3;
+  background: #222;
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: .5rem;
@@ -604,6 +727,9 @@ body {
 @media (max-width: 991px) {
   html {
     font-size: 55%;
+  }
+  body {
+    overflow: hidden;
   }
   .header {
     padding: 1.5rem 2rem;
@@ -648,10 +774,13 @@ body {
 
 @media (max-width: 450px) {
   html {
-    font-size: 50%;
+    font-size: 53%;
   }
   .about .content h3 {
     font-size: 3.5rem;
+  }
+  .banner .content h3 {
+    font-size: 2.7rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
