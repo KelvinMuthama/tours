@@ -4,6 +4,10 @@ document.querySelector("#menu-btn").onclick = () => {
   navbar.classList.toggle("active");
 };
 
+navbar.onclick = () => {
+  navbar.classList.remove("active");
+};
+
 document
   .querySelectorAll(".about .video-container .controls .control-btn")
   .forEach((btn) => {
